@@ -47,6 +47,8 @@ namespace Core.App.Api.Controllers
                 claims,
                 expires: DateTime.Now.AddMinutes(15),
                 signingCredentials: credentials);
+            return new JwtSecurityTokenHandler().WriteToken(token);
+
         }
 
         private User Authenticate(User users)
