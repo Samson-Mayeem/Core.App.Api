@@ -1,4 +1,11 @@
-﻿namespace Core.App.Api.Data
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
+using System.IdentityModel.Tokens.Jwt;
+using System.Text;
+using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
+
+namespace Core.App.Api.Data
 {
     public class JwtAuthManager
     {
@@ -12,6 +19,14 @@
         public JwtAuthManager(string Key)
         {
            this._apiAuthKey = Key;
-        }   
+        }  
+        /*public string Authenticate(string email, string password) 
+        {
+            if(!users.Any(u->u.Key))
+            {
+
+            }
+         }*/
     }
 }
+
