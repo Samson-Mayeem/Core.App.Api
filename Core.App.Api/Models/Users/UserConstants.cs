@@ -6,7 +6,7 @@
         {
             new Models.Users.User()
             {
-                    Id = 1, UserId = "UB0989",Email="sam@gmail.com", FirstName =" Sam", SurName = "Mayeem", Password = "1234" 
+                    Id = 1, UserId = "UB0989",Email="sam@gmail.com", FirstName =" Sam", SurName = "Mayeem", Password = "1234", Role ="Admin"        
             },
         };
     }

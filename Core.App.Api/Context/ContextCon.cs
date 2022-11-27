@@ -11,6 +11,6 @@ namespace Core.App.Api.Context
         }
         public DbSet<Product> products { get; set; }
         public DbSet<News> news { get; set; }
-       public DbSet<Payment> payments { get; set; }    
+        public DbSet<Payment> payments { get; set; }    
     }
 }

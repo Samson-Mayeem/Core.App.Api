@@ -9,6 +9,8 @@ using System.Text;
 
 namespace Core.App.Api.Controllers
 {
+    [Route("api/controller")]
+    [ApiController]
     public class UserController : ControllerBase
     {
         private IConfiguration _config;
@@ -36,10 +38,10 @@ namespace Core.App.Api.Controllers
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             var claims = new[]
             {
-            new Claim(ClaimTypes.Email, user.Email),
-            new Claim(ClaimTypes.Surname, user.SurName),
-            new Claim(ClaimTypes.GivenName, user.FirstName),
-            new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Surname, user.SurName),
+                new Claim(ClaimTypes.GivenName, user.FirstName),
+                new Claim(ClaimTypes.Role, user.Role),
             };
             var token =new JwtSecurityToken(
                 _config["Jwt:Issuer"],
