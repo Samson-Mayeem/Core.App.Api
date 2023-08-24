@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Core.App.Api.Context
 {
-    public class ContextCon : DbContext
+    public class ContextCon : IdentityContext
     {
         public ContextCon(DbContextOptions options): base(options)
         {
