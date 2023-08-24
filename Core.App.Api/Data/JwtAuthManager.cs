@@ -18,7 +18,7 @@ namespace Core.App.Api.Data
         };
         public JwtAuthManager(string Key)
         {
-           this._apiAuthKey = Key;
+            _apiAuthKey = Key;
         }  
         /*public string Authenticate(string email, string password) 
         {
